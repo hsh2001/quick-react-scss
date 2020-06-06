@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { camelCase } = require('camel-case');
 const ucfirst = require('ucfirst');
-const [providedComponentName] = process.argv.slice(2);
+const [providedComponentName, isPropsNeed] = process.argv.slice(2);
 
 if (!providedComponentName || !providedComponentName.trim()) {
   console.log(
@@ -49,8 +49,16 @@ function preparePath(basePath) {
 fs.writeFileSync(
   preparePath(`components/${componentName}.tsx`),
   `import style from "../style/${componentName}.module.scss";
+${
+  isPropsNeed
+    ? `interface ${componentName}Props {
 
-const ${componentName}: React.FC = () => {
+}`
+    : ''
+}
+const ${componentName}: React.FC${
+    isPropsNeed ? `<${componentName}Props>` : ``
+  } = (${isPropsNeed ? `{}:${componentName}Props` : ``}) => {
     return <div className={style.${className}}></div>
 }`,
 );
