@@ -1,0 +1,28 @@
+{
+  "name": "quick-react-scss",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsh2001/quick-react-scss.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "hsh2001",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hsh2001/quick-react-scss/issues"
+  },
+  "homepage": "https://github.com/hsh2001/quick-react-scss#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.11",
+    "eslint": "^7.2.0",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "camel-case": "^4.1.1",
+    "ucfirst": "^1.0.0"
+  }
+}
