@@ -46,7 +46,7 @@ function preparePath(basePath) {
   return resultPath;
 }
 
-fs.writeFileSync(
+fs.writeFile(
   preparePath(`components/${componentName}.tsx`),
   `import style from "../style/${componentName}.module.scss";
 ${
@@ -61,11 +61,13 @@ const ${componentName}: React.FC${
   } = (${isPropsNeed ? `{}:${componentName}Props` : ``}) => {
     return <div className={style.${className}}></div>
 }`,
+  () => {},
 );
 
-fs.writeFileSync(
+fs.writeFile(
   preparePath(`styles/${componentName}.module.scss`),
   `.${className} {
 
 }`,
+  () => {},
 );
