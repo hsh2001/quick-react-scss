@@ -48,7 +48,7 @@ function preparePath(basePath) {
 
 fs.writeFile(
   preparePath(`components/${componentName}.tsx`),
-  `import style from "../style/${componentName}.module.scss";
+  `import style from "../styles/${componentName}.module.scss";
 ${
   isPropsNeed
     ? `interface ${componentName}Props {
