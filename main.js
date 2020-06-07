@@ -60,7 +60,10 @@ const ${componentName}: React.FC${
     isPropsNeed ? `<${componentName}Props>` : ``
   } = (${isPropsNeed ? `{}:${componentName}Props` : ``}) => {
     return <div className={style.${className}}></div>
-}`,
+}
+
+export default ${componentName}
+`,
   () => {},
 );
 
