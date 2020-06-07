@@ -7,7 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/hsh2001/quick-react-scss.git"
   },
-  "bin": "./main.js",
+  "bin": {
+    "qrs": "./main.js"
+  },
   "keywords": [
     "react"
   ],
